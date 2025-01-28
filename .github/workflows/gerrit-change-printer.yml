@@ -11,6 +11,10 @@ jobs:
   print-patchset:
     runs-on: ubuntu-latest
     steps:
+      - name: Print environment variables
+        run: |
+          echo "Repository name: $GITHUB_REPOSITORY"
+          echo "Branch name: $GITHUB_REF"
       - name: Print client_payload
         run: |
           echo '${{ toJson(inputs.client_payload) }}'
