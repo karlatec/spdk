@@ -14,3 +14,5 @@ jobs:
       # "Client payload" is all of the information Gerrit webhooks sends out.
       patchset_ref: ${{ github.event.client_payload.patchSet.ref }}
       patchset_rev: ${{ github.event.client_payload.patchSet.revision }}
+      patchset_num: ${{ github.event.client_payload.patchSet.number }}
+      change_num: ${{ github.event.client_payload.change.number }}
